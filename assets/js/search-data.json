@@ -40,7 +40,7 @@
   
       ,"page1": {
           "title": "About Us",
-          "content": "Exploring Artificial Intelligence and applications with PyTorch and fast.ai. . Planning to blog about: [1] Deep Learning [2] Mathematical breakdown of deep learning [3] Useful Python packages for practical applications [4] Who knows … . Topics: [1] Speech and Digital Signal Processing [2] Natural Language Processing [3] Computational Biology .",
+          "content": "Exploring Artificial Intelligence and applications with PyTorch and fast.ai. . Planning to blog about: . Deep Learning | Mathematical breakdown of deep learning | Useful Python packages for practical applications | More to come … | . Topics . Speech and Digital Signal Processing | Natural Language Processing | Computational Biology | .",
           "url": "https://sand-train.github.io/blogs/about/",
           "relUrl": "/about/",
           "date": ""
