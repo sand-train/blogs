@@ -9,15 +9,18 @@ permalink: /about/
 
 Exploring Artificial Intelligence and applications with PyTorch and fast.ai.
 
-Planning to blog about:
-[1] Deep Learning
-[2] Mathematical breakdown of deep learning
-[3] Useful Python packages for practical applications
-[4] Who knows ...
+### Planning to blog about:
 
-Topics:
-[1] Speech and Digital Signal Processing
-[2] Natural Language Processing
-[3] Computational Biology
+* Deep Learning  
+* Mathematical breakdown of deep learning  
+* Useful Python packages for practical applications  
+* More to come ...
+
+
+### Topics
+
+* Speech and Digital Signal Processing  
+* Natural Language Processing  
+* Computational Biology  
 
 
