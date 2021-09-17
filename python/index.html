@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Python classes | sand-train</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Python classes" />
+<meta name="author" content="Sandra" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A quick look into Python classes" />
+<meta property="og:description" content="A quick look into Python classes" />
+<link rel="canonical" href="https://sand-train.github.io/blogs/python/" />
+<meta property="og:url" content="https://sand-train.github.io/blogs/python/" />
+<meta property="og:site_name" content="sand-train" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-09-16T00:00:00-05:00" />
+<script type="application/ld+json">
+{"datePublished":"2021-09-16T00:00:00-05:00","url":"https://sand-train.github.io/blogs/python/","@type":"BlogPosting","headline":"Python classes","dateModified":"2021-09-16T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://sand-train.github.io/blogs/python/"},"author":{"@type":"Person","name":"Sandra"},"description":"A quick look into Python classes","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/blogs/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://sand-train.github.io/blogs/feed.xml" title="sand-train" /><link rel="shortcut icon" type="image/x-icon" href="/blogs/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/blogs/">sand-train</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/blogs/about/">About Us</a><a class="page-link" href="/blogs/search/">Search</a><a class="page-link" href="/blogs/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Python classes</h1><p class="page-description">A quick look into Python classes</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-09-16T00:00:00-05:00" itemprop="datePublished">
+        Sep 16, 2021
+      </time>• 
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">Sandra</span></span>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      3 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/blogs/categories/#python">python</a>
+        
+      
+      </p>
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-wrap flex-justify-end">
+          <div class="px-2">
+
+    <a href="https://github.com/sand-train/blogs/tree/master/_notebooks/2021_17_09_Python_Classes.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/blogs/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/sand-train/blogs/master?filepath=_notebooks%2F2021_17_09_Python_Classes.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/blogs/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/sand-train/blogs/blob/master/_notebooks/2021_17_09_Python_Classes.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/blogs/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#Instance-of-a-class">Instance of a class </a></li>
+<li class="toc-entry toc-h2"><a href="#Attributes-of-a-class">Attributes of a class </a></li>
+<li class="toc-entry toc-h2"><a href="#A-special-argument:-self">A special argument: self </a></li>
+<li class="toc-entry toc-h2"><a href="#Classes-we-can-re-use-for-ML">Classes we can re-use for ML </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Dot-Product">Dot Product </a></li>
+</ul>
+</li>
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2021_17_09_Python_Classes.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Example</span><span class="p">:</span>
+    <span class="c1"># default constructor</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">):</span>
+      <span class="sd">'''Example of a Python class with three parameters, including self.</span>
+<span class="sd">      Arguments map to n and m.'''</span> 
+
+      <span class="nb">print</span><span class="p">(</span><span class="s2">"Address of self = "</span><span class="p">,</span><span class="nb">id</span><span class="p">(</span><span class="bp">self</span><span class="p">))</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">n</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">mood</span> <span class="o">=</span> <span class="n">m</span>
+
+    <span class="k">def</span> <span class="nf">say</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">x</span><span class="p">):</span> 
+      <span class="sd">'''Method of the class Example with two parameters, including self. </span>
+<span class="sd">        Note that this method only takes one argument mapping to x.'''</span>
+        
+      <span class="bp">self</span><span class="o">.</span><span class="n">instance_attribute</span> <span class="o">=</span> <span class="n">x</span>
+      <span class="k">return</span> <span class="sa">f</span><span class="s1">'Hello </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s1">, </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s1">! This is </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">mood</span><span class="si">}</span><span class="s1">!'</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Instance-of-a-class">
+<a class="anchor" href="#Instance-of-a-class" aria-hidden="true"><span class="octicon octicon-link"></span></a>Instance of a class<a class="anchor-link" href="#Instance-of-a-class"> </a>
+</h2>
+<p>We invoke any class's instance-making function by using the name of the class as a function. In our case, the name of our class is <code>Example</code>, so the name of the instance-creation function is <code>Example()</code>.</p>
+<p><code>ex</code> is an instance of the class <code>Example</code>:</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ex</span> <span class="o">=</span> <span class="n">Example</span><span class="p">(</span><span class="s1">'Sandra'</span><span class="p">,</span> <span class="s1">'Exciting'</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ex</span><span class="o">.</span><span class="n">say</span><span class="p">(</span><span class="s2">"let's learn about classes"</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Hello Sandra, let's learn about classes! This is Exciting!
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Attributes-of-a-class">
+<a class="anchor" href="#Attributes-of-a-class" aria-hidden="true"><span class="octicon octicon-link"></span></a>Attributes of a class<a class="anchor-link" href="#Attributes-of-a-class"> </a>
+</h2>
+<p>Let's list the attributes of the class by using <code>dir(my_instance)</code>.<br>
+Python uses the word attribute to indicate both the methods of an object and the names of any values stored in an object. An attribute is a name associated with another object.<br>
+Note that a class is also an object.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">dir</span><span class="p">(</span><span class="n">ex</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>['__class__',
+ '__delattr__',
+ '__dict__',
+ '__dir__',
+ '__doc__',
+ '__eq__',
+ '__format__',
+ '__ge__',
+ '__getattribute__',
+ '__gt__',
+ '__hash__',
+ '__init__',
+ '__init_subclass__',
+ '__le__',
+ '__lt__',
+ '__module__',
+ '__ne__',
+ '__new__',
+ '__reduce__',
+ '__reduce_ex__',
+ '__repr__',
+ '__setattr__',
+ '__sizeof__',
+ '__str__',
+ '__subclasshook__',
+ '__weakref__',
+ 'instance_attribute',
+ 'mood',
+ 'name',
+ 'say']</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="A-special-argument:-self">
+<a class="anchor" href="#A-special-argument:-self" aria-hidden="true"><span class="octicon octicon-link"></span></a>A special argument: <em>self</em><a class="anchor-link" href="#A-special-argument:-self"> </a>
+</h2>
+<p>It's odd that in our previous example of a class, we only passed one argument (a string); however, two parameters showed up in the definition of the method <code>self</code> and <code>x</code>.</p>
+<p><code>self</code> is associated with the instance being made, that is the object that called the method. Python will automatically map the first parameter in a method definition to the object that called the method.</p>
+<p>In our previous example <code>ex</code> maps to <code>self</code>, while <code>"let's learn about classes"</code> maps to <code>x</code>.</p>
+<p>The <code>self</code> must always be placed as the first parameter in any method definition.</p>
+<p>We can also see that <code>self</code> has a new attribute called <code>instance_attribute</code>. Let us print this ro see that <code>say</code> assigns <code>x</code> to the <code>instance_attribute</code>.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"Instance has new attribute with value: "</span><span class="p">,</span><span class="n">ex</span><span class="o">.</span><span class="n">instance_attribute</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">/var/folders/g_/1l894xhd10g6tj9857m75k8r0000gn/T/ipykernel_8614/2259833054.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"Instance has new attribute with value: "</span><span class="ansi-blue-fg">,</span>ex<span class="ansi-blue-fg">.</span>instance_attribute<span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">NameError</span>: name 'ex' is not defined</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Finally, we can see in the code below that <code>self</code> and <code>my_instance</code> is referring to the same object.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_instance</span> <span class="o">=</span> <span class="n">Example</span><span class="p">(</span><span class="s1">'Sandra'</span><span class="p">,</span> <span class="s1">'Exciting'</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Address of class object = "</span><span class="p">,</span><span class="nb">id</span><span class="p">(</span><span class="n">my_instance</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Address of self =  140430184214032
+Address of class object =  140430184214032
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Classes-we-can-re-use-for-ML">
+<a class="anchor" href="#Classes-we-can-re-use-for-ML" aria-hidden="true"><span class="octicon octicon-link"></span></a>Classes we can re-use for ML<a class="anchor-link" href="#Classes-we-can-re-use-for-ML"> </a>
+</h2>
+<p><a href="https://scipython.com/book2/chapter-4-the-core-python-language-ii/examples/a-2d-vector-class/">https://scipython.com/book2/chapter-4-the-core-python-language-ii/examples/a-2d-vector-class/</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Dot-Product">
+<a class="anchor" href="#Dot-Product" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dot Product<a class="anchor-link" href="#Dot-Product"> </a>
+</h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Vec2D</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+      <span class="sd">'''A 2-D vector with Cartesian coordinates.'''</span>
+
+      <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">y</span>
+      <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">dp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+      <span class="sd">'''Computes the dot product of two vectors with only 2-D Cartesian coordinates.'''</span>
+      
+        <span class="c1"># return self.x * other.x + self.y * other.y</span>
+      <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">*</span> <span class="n">other</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">*</span> <span class="n">other</span><span class="o">.</span><span class="n">y</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">Vec2D</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">Vec2D</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">dot_product</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">dp</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'vector1.dp(vector2) = '</span><span class="p">,</span> <span class="n">dot_product</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>2 -3
+4 5
+vector1.dp(vector2) =  -7
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Vectors</span><span class="p">:</span>
+  <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
+    <span class="sd">'''Takes two vectors of any length.'''</span>
+
+    <span class="bp">self</span><span class="o">.</span><span class="n">a</span> <span class="o">=</span> <span class="n">a</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">=</span> <span class="n">b</span> 
+    <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+    
+  <span class="k">def</span> <span class="nf">dp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="sd">'''Checks vectors are of equal length and computes dot product.'''</span>
+    
+    <span class="k">try</span><span class="p">:</span>
+      <span class="k">assert</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">b</span><span class="p">)),</span> <span class="sa">f</span><span class="s2">"Vectors </span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s2"> and </span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s2"> are not of equal length."</span>
+      <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="n">y</span> <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">))</span> <span class="c1"># zip will lead to issues with dot products when vectors are not the same length</span>
+    <span class="k">except</span> <span class="ne">AssertionError</span> <span class="k">as</span> <span class="n">msg</span><span class="p">:</span>
+      <span class="nb">print</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">]</span>
+
+<span class="n">v</span> <span class="o">=</span> <span class="n">Vectors</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+<span class="n">dot_product</span> <span class="o">=</span> <span class="n">v</span><span class="o">.</span><span class="n">dp</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dot_product</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1, 2, 3, 4] [0.5, 0.1, 0.2, 0.2]
+2.1
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+</div>
+
+
+
+  </div><a class="u-url" href="/blogs/python/" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/blogs/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/blogs/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/blogs/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fastai" title="fastai"><svg class="svg-icon grey"><use xlink:href="/blogs/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/blogs/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
